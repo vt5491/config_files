@@ -1,0 +1,445 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+f", 
+        "command": "cursorPageDown", 
+        "when": "editorFocus"
+    }, 
+    // vt: failed attempt to get charactar advancement
+    // when in vi insert mode
+    // {
+    //     "key": "ctrl+f", 
+    //     "command": "cursorDown", 
+    //     "when": "editorTextFocus"
+    // }, 
+    {
+        "key": "ctrl+b", 
+        "command": "cursorPageUp", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+n", 
+        "command": "cursorDown", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+p", 
+        "command": "cursorUp", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+a", 
+        "command": "cursorHome", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+e", 
+        "command": "cursorEnd", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+f", 
+        "command": "cursorWordRight", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+b", 
+        "command": "cursorWordLeft", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+shift+,", 
+        "command": "cursorTop", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+shift+.", 
+        "command": "cursorBottom", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+v", 
+        "command": "cursorPageDown", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+v", 
+        "command": "cursorPageUp", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closePeekDeclarationEditor", 
+        "when": "editorFocus && inInnerEditor"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closeReferenceSearchEditor", 
+        "when": "editorFocus && inInnerEditor"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "cancelSelection", 
+        "when": "editorTextFocus && editorHasSelection"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "removeSecondaryCursors", 
+        "when": "editorTextFocus && editorHasMultipleSelections"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closeFindWidget", 
+        "when": "editorFocus && findWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "leaveChangeAllMode", 
+        "when": "editorTextFocus && inChangeAllMode"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "leaveSnippet", 
+        "when": "editorTextFocus && inSnippetMode"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closeMarkersNavigation", 
+        "when": "editorFocus && markersNavigationVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closePeekDeclaration", 
+        "when": "editorFocus && peekDeclarationVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closeReferenceSearch", 
+        "when": "editorFocus && referenceSearchVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closeParameterHints", 
+        "when": "editorTextFocus && parameterHintsVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "closeQuickFixWidget", 
+        "when": "editorFocus && quickFixWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "hideSuggestWidget", 
+        "when": "editorTextFocus && suggestWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "cancelRenameInput", 
+        "when": "editorFocus && renameInputVisible"
+    }, 
+    {
+        "key": "ctrl+g", 
+        "command": "workbench.action.closeMessages", 
+        "when": "globalMessageVisible"
+    }, 
+    {
+        "key": "ctrl+x ctrl+f", 
+        "command": "workbench.action.files.openFile"
+    }, 
+    {
+        "key": "ctrl+x ctrl+s", 
+        "command": "workbench.action.files.save"
+    }, 
+    {
+        "key": "ctrl+x s", 
+        "command": "workbench.action.files.saveAll"
+    }, 
+    {
+        "key": "ctrl+x s", 
+        "command": "workbench.action.files.saveAs"
+    }, 
+    {
+        "key": "ctrl+x 0", 
+        "command": "workbench.action.closeActiveEditor"
+    }, 
+    {
+        "key": "ctrl+x 3", 
+        "command": "workbench.action.splitEditor"
+    }, 
+    {
+        "key": "ctrl+x o", 
+        "command": "workbench.action.navigateEditorGroups"
+    }, 
+    {
+        "key": "ctrl+x b", 
+        "command": "workbench.action.quickOpen"
+    }, 
+    {
+        "key": "ctrl+p", 
+        "command": "workbench.action.quickOpenNavigatePrevious", 
+        "when": "inQuickOpen"
+    }, 
+    {
+        "key": "ctrl+n", 
+        "command": "workbench.action.quickOpenNavigateNext", 
+        "when": "inQuickOpen"
+    }, 
+    {
+        "key": "ctrl+d", 
+        "command": "deleteRight", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+h", 
+        "command": "deleteLeft", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+d", 
+        "command": "deleteWordRight", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+h", 
+        "command": "deleteWordLeft", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+k", 
+        "command": "editor.action.clipboardCutAction", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+w", 
+        "command": "editor.action.clipboardCopyAction", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+w", 
+        "command": "editor.action.clipboardCutAction", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+y", 
+        "command": "editor.action.clipboardPasteAction", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "alt+x", 
+        "command": "workbench.action.showCommands"
+    }, 
+    {
+        "key": "ctrl+n", 
+        "command": "showNextParameterHint", 
+        "when": "editorTextFocus && parameterHintsVisible"
+    }, 
+    {
+        "key": "ctrl+p", 
+        "command": "showPrevParameterHint", 
+        "when": "editorTextFocus && parameterHintsVisible"
+    }, 
+    {
+        "key": "ctrl+v", 
+        "command": "selectNextPageQuickFix", 
+        "when": "editorFocus && quickFixWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+n", 
+        "command": "selectNextQuickFix", 
+        "when": "editorFocus && quickFixWidgetVisible"
+    }, 
+    {
+        "key": "alt+v", 
+        "command": "selectPrevPageQuickFix", 
+        "when": "editorFocus && quickFixWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+p", 
+        "command": "selectPrevQuickFix", 
+        "when": "editorFocus && quickFixWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+v", 
+        "command": "selectNextPageSuggestion", 
+        "when": "editorTextFocus && suggestWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+n", 
+        "command": "selectNextSuggestion", 
+        "when": "editorTextFocus && suggestWidgetVisible"
+    }, 
+    {
+        "key": "alt+v", 
+        "command": "selectPrevPageSuggestion", 
+        "when": "editorTextFocus && suggestWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+p", 
+        "command": "selectPrevSuggestion", 
+        "when": "editorTextFocus && suggestWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+s", 
+        "command": "actions.find", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+s", 
+        "command": "editor.action.nextMatchFindAction", 
+        "when": "editorFocus && findWidgetVisible"
+    }, 
+    {
+        "key": "ctrl+r", 
+        "command": "actions.find", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+r", 
+        "command": "editor.action.previousMatchFindAction", 
+        "when": "editorFocus && findWidgetVisible"
+    }, 
+    {
+        "key": "alt+shift+5", 
+        "command": "editor.action.startFindReplaceAction", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+x h", 
+        "command": "editor.action.selectAll", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+/", 
+        "command": "undo", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+_", 
+        "command": "undo", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+alt+/", 
+        "command": "redo", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+x u", 
+        "command": "undo", 
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+alt+_", 
+        "command": "redo", 
+        "when": "editorTextFocus"
+    },
+    //vt add
+    {
+        "key": "ctrl+shift+j",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus"
+    }, 
+    {
+        "key": "ctrl+shift+k",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus"
+    },
+    { 
+      "key": "ctrl+shift+o",      
+      "command": "editor.action.insertLineBefore",
+      "when": "editorTextFocus" 
+    },
+    // 2016-08-03
+    {
+        "key": "ctrl+\\",
+        "command" : "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+/",
+        //"command" : "editor.emmet.action.toggleComment"
+        "command" : "editor.action.commentLine",
+        "when" : "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x k", 
+        "command": "workbench.action.closeActiveEditor"
+    }, 
+    {
+        "key": "alt+\\", 
+        "command": "workbench.action.focusSideBar",
+        "when" : "editorTextFocus" 
+    },
+// failed attempt to get better keybindings in sidebar^
+    // {
+    //     "key": "ctrl+n", 
+    //     "command": "cursorDown",
+    //     "when" : "!editorTextFocus" 
+    // }, 
+    // {
+    //     "key": "ctrl+p", 
+    //     "command": "workbench.action.",
+    //     "when" : "!editorTextFocus" 
+    // } 
+    //vt end
+    // Note: VC does *not* support vertical split
+    // {
+    //     "key": "ctrl+x 2", 
+    //     "command": "workb"
+    // } 
+     {
+        "key" : "ctrl+shift+i",
+        "when": "editorFocus",
+        "command" : "workbench.action.toggleDevTools"
+      },   
+      {
+        "key" : "ctrl+x 1",
+        "command" : "workbench.action.closeEditorsInOtherGroups",
+        "when" : "editorTextFocus" 
+      }, 
+      // add a keybinding for error hover..which is normally
+      // ctrl-k or ctrl-i, but we lose to emacs overrides
+      {
+        "key" : "ctrl+x i",
+        "command" : "editor.action.showHover",
+        "when" : "editorTextFocus" 
+      },
+      // 2016-08-11
+      // allow ctrl-f and ctrl-b be char forward/backward 
+      // note: ctrl-n and ctrl-p work as exepcted out of the box
+      // when in vi insert mode
+      {
+          "key": "ctrl+f",
+          "command": "cursorRight",
+          "when": "editorTextFocus && vim.mode == 'Insert Mode'"
+      },
+      {
+          "key": "ctrl+b",
+          "command": "cursorLeft",
+          "when": "editorTextFocus && vim.mode == 'Insert Mode'"
+      },
+      // 2016-09-10
+      // add alt-n and alt-p to scroll a page down in intellisense list
+      {
+          // "key": "ctrl+v", 
+          "key": "alt+n",
+          "command": "selectNextPageSuggestion",
+          "when": "editorTextFocus && suggestWidgetVisible"
+      },
+      {
+          // "key": "alt+v", 
+          "key": "alt+p",
+          "command": "selectPrevPageSuggestion",
+          "when": "editorTextFocus && suggestWidgetVisible"
+      },
+      // 2016-11-03
+      // linux bash-like key bindings to switch between physically
+      // adjacent tabs
+      {
+          "key": "shift-alt-n",
+          "command": "workbench.action.nextEditor"
+      },
+      {
+          "key": "shift-alt-p",
+          "command": "workbench.action.previousEditor"
+      }
+]

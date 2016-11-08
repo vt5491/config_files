@@ -1,0 +1,103 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on OS X and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * https://atom.io/docs/latest/hacking-atom-debugging#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+#vt add
+'body atom-text-editor.autocomplete-active':
+  'ctrl-p': 'autocomplete-plus:move-up'
+  'ctrl-n': 'autocomplete-plus:move-down'
+  'alt-p': 'autocomplete-plus:page-up'
+  'alt-n': 'autocomplete-plus:page-down'
+  'home': 'autocomplete-plus:move-to-top'
+  'end': 'autocomplete-plus:move-to-bottom'
+# vim-plus ex mode 2016-04-18
+'atom-text-editor.vim-mode-plus.normal-mode':
+  ':': 'vim-mode-plus-ex-mode:open'
+  '!': 'vim-mode-plus-ex-mode:toggle-setting'
+# add cmd palette key bindings
+# 'body .native-key-bindings':
+#   'ctrl-p': 'command-palette:move-up'
+#   'ctrl-n': 'command-palette:move-down'
+'atom-workspace':
+  # these work
+  'ctrl-p' : 'core:move-up'
+  'ctrl-n' : 'core:move-down'
+  # these don't work
+  'alt-p': 'core:page-up'
+  'shift-alt-n': 'core:page-down'
+# disable this emacs binding because it interferes with the tree-view:focus
+'atom-workspace atom-text-editor':
+  'alt-\\': 'unset!'
+
+# 2016-04-20: set up find-and-replace bindings
+'.platform-linux atom-text-editor':
+  'alt-r': 'find-and-replace:replace-next'
+# 2016-04-20: undo MRU tab switching
+# 'body':
+#   'ctrl-tab ^ctrl': 'unset!'
+#   'ctrl-tab': 'pane:show-next-item'
+#   'ctrl-shift-tab ^ctrl': 'unset!'
+#   'ctrl-shift-tab': 'pane:show-previous-item'
+# 2016-07-14: this works better
+'body':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+# 2016-06-27: override run package specs since it intereres with my desktop
+# switching key bindings
+'body':
+  'shift-ctrl-alt-t': 'window:run-package-specs'
+
+#vt 2016-09-02 turn off the nuclide search with overrides the default 'window reload'
+# which we need for package development
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+  #'ctrl-alt-r': 'nuclide-recent-files-provider:toggle-provider'
+  'ctrl-alt-r': 'unset!'
+# 2016-09-03
+# get better behavior on vertical split
+'body':
+  # 'ctrl-x 3': 'pane:split-right'
+  'ctrl-x 3': 'pane:split-right-and-copy-active-item'
+
+'atom-text-editor.vim-mode-plus.insert-mode':
+  # 2016-10-05
+  'ctrl-y': 'core:paste'
+
+# 2016-11-08
+# enable physically adjacent tab switching
+'body':
+  'alt-shift-n': 'pane:show-next-item'
+  'alt-shift-p': 'pane:show-previous-item'
+# need to disable the defualt for alt-shift-n
+'atom-workspace':
+  # 'alt-shift-N': 'core:page-down'
+  'alt-shift-N': 'unset!'
