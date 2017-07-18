@@ -441,6 +441,21 @@
         "command" : "workbench.action.terminal.focusPrevious",
         "when" : "terminalFocus"
     },
+    // 2017-07-17 turn off some default terminal key bindings so emacs line
+    // command bindings will then be primary
+    // Note: by not having a command we turn off the binding
+    {
+        "key" : "ctrl-k",
+        "when" : "terminalFocus"
+    },
+    {
+        "key" : "ctrl-f",
+        "when" : "terminalFocus"
+    },
+    {
+        "key" : "ctrl-e",
+        "when" : "terminalFocus"
+    },
     // 2017-05-18
     // {
     //     "key" : "ctrl-s",
@@ -448,8 +463,20 @@
     // }
     {
         "key": "ctrl-s",
-        "command": "editor.action.startFindReplaceAction",
+        // "command": "editor.action.startFindReplaceAction",
+        "command": "actions.find",
         "when": "editorTextFocus"
+    },
+    // 2017-06-29 per stack overflow response
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "!editorFocus"
     }
     //vt end
 ]
